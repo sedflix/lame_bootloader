@@ -15,3 +15,4 @@
 - https://www.codeproject.com/Articles/45788/The-Real-Protected-Long-mode-assembly-tutorial-for
 - https://stackoverflow.com/questions/41085245/setting-up-paging-for-real-mode-to-64-bit-long-mode-switch
 - https://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-4.html
+- Writing OS in Rust: lol: https://os.phil-opp.com/entering-longmode/ 
