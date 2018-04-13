@@ -1,6 +1,6 @@
 [bits 32]
 
-COLOR equ 0x01
+COLOR equ 0x0f
 
 print32:
 
