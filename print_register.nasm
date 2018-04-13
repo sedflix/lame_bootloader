@@ -7,7 +7,7 @@ print_register:
 
 	printing_loop:
 		mov rax, cr3
-		cmp ecx, 0
+		cmp rcx, 0
 		je end_print_register
 
 		mov rdx, 0
