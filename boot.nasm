@@ -102,6 +102,7 @@ RealModeCode:
     mov rbx, 0xb8500 ; Starting printing postion in Video Buffer
     call print_register
     
+    mov rax, [0x00000043]
     hlt
 
 
