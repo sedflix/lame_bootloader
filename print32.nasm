@@ -1,12 +1,10 @@
 [bits 32]
 
-COLOR equ 0x0f
-
 print32:
 
     pusha
     mov edx, edi
-    mov ah, COLOR
+    mov ah, 0x0f
 
     print32_loop:
         mov al, [ebx]

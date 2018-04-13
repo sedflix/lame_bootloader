@@ -3,6 +3,8 @@ org 0x7c00 ; BIOS boot origin
 ; TODO: See where to do things with A10
 main:
 
+    ; I should DISABLE A20 here but who cares?
+
     ; SETTING UP STACK
     mov bp, 0x9000
     mov sp, bp
@@ -21,6 +23,7 @@ main:
 switch_to_pm:
     
     cli
+    ; I realised that I don't care about interrupts
 
     ;==============================================================================
     ;PREPARING TO ENTER PROTECTED MODE 
@@ -32,6 +35,8 @@ switch_to_pm:
     mov eax, cr0
     or eax, 0x1 ;
     mov cr0, eax
+
+    ; I should ENABLE A20 here but I didn't disable :)
 
     ;==============================================================================
     ;ENTERS PROTECTED MODE 
@@ -52,9 +57,9 @@ ProtectedModeCode:
     call set_seg_register
 
     ; Printing in Protected Mode
-    mov edi, 0xb8000
-    mov ebx, MSG_2
-    call print32
+    ; mov edi, 0xb8000
+    ; mov ebx, MSG_2
+    ; call print32
 
     jmp switch_to_long_mode
 
