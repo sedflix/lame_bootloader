@@ -1,12 +1,13 @@
-; It prints the value of CR3 in Long Mode
+; It prints the value of R9 REGISTER in Long Mode
 ; RBX: Position to print the content of CR3
+; R9 contains the value.
 
 print_register:
 
 	mov rcx, 63 ; number of bits
 
 	printing_loop:
-		mov rax, cr3
+		mov rax, r9
 		cmp rcx, 0
 		je end_print_register
 

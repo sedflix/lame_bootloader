@@ -100,6 +100,7 @@ RealModeCode:
 
     ; PRINTING THE CONTENT OF REGISTER cr3
     mov rbx, 0xb8500 ; Starting printing postion in Video Buffer
+    mov r9, cr3
     call print_register
     
     mov rax, [0x00000043]
